@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+/* Tambahkan animasi glow pada tombol */
+.glow-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-animation .glow-border {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, rgba(25, 0, 255, 0.2), rgba(255, 255, 255, 0));
+  opacity: 0.8;
+  border-radius: 50%;
+  animation: rotateGlow 3s linear infinite;
+  z-index: 0;
+}
+
+/* Keyframes untuk animasi putaran cahaya */
+@keyframes rotateGlow {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Supaya text button berada di atas glow */
+.glow-animation span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Wrapper for falling particles */
+.falling-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* Agar tidak mengganggu elemen lainnya */
+  z-index: 0;
+}
+
+/* Set up individual particle styling */
+.particle {
+  position: absolute;
+  bottom: 100%;
+  width: 5px;
+  height: 5px;
+  background: rgba(0, 17, 90, 0.8);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall 5s linear infinite;
+}
+
+/* Keyframes untuk animasi jatuh */
+@keyframes fall {
+  0% {
+      transform: translateY(0);
+      opacity: 0.8;
+  }
+  80% {
+      opacity: 0.6;
+  }
+  100% {
+      transform: translateY(100vh);
+      opacity: 0;
+  }
+}
+
+/* Randomize particle positions and sizes */
+.particle:nth-child(2n) { 
+  width: 6px; 
+  height: 6px; 
+  animation-duration: 6s;
+}
+.particle:nth-child(3n) { 
+  width: 4px; 
+  height: 4px; 
+  animation-duration: 4.5s; 
+}
+.particle:nth-child(5n) { 
+  width: 7px; 
+  height: 7px; 
+  animation-duration: 5.5s; 
+}
+.particle:nth-child(7n) { 
+  width: 3px; 
+  height: 3px; 
+  animation-duration: 6.5s; 
+}
+
+/* Randomize initial positions */
+.particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+.particle:nth-child(2) { left: 25%; animation-delay: 1s; }
+.particle:nth-child(3) { left: 40%; animation-delay: 2s; }
+.particle:nth-child(4) { left: 55%; animation-delay: 0.5s; }
+.particle:nth-child(5) { left: 70%; animation-delay: 1.5s; }
+.particle:nth-child(6) { left: 85%; animation-delay: 0.8s; }
+.particle:nth-child(7) { left: 50%; animation-delay: 1.2s; }
+.particle:nth-child(8) { left: 15%; animation-delay: 1.7s; }
+.particle:nth-child(9) { left: 65%; animation-delay: 2.2s; }
+.particle:nth-child(10) { left: 35%; animation-delay: 2.5s; }
