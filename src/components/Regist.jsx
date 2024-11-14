@@ -17,23 +17,23 @@ const Regist = () => {
                 <h2 className='text-xl font-bold mt-5'>WEEKLY LEGENDS ARENA SEASON 1</h2>
                 <h2 className='text-sm font-semibold'>MLBB ONLINE TOURNAMENT</h2>
                 
-                <button className='relative bg-[#060d2b] px-5 py-3 font-semibold text-xl mt-5 rounded-xl shadow-xl text-white w-full glow-animation'>
+                <a href='https://docs.google.com/forms/d/e/1FAIpQLSflNorKm8HNsJcq4QD0CfHztmQ6WOtAhHowNjbKfCx1c54yHA/viewform?usp=sf_link' className='relative bg-[#060d2b] px-5 py-3 font-semibold text-xl mt-5 rounded-xl shadow-xl text-white w-full glow-animation'>
                     REGIST NOW
                     <span className="glow-border"></span>
-                </button>
+                </a>
 
-                <button className='bg-[#000] px-5 py-3 font-semibold text-xl mt-5 rounded-xl shadow-xl text-white w-full flex gap-2 justify-center items-center'>
+                <a href='https://wa.link/u0sqbu' className='bg-[#fff] px-5 py-3 font-semibold text-xl mt-5 rounded-xl shadow-xl text-[#060d2b] flex gap-2 justify-center items-center'>
                     <FaWhatsapp className='text-2xl' />+62 8786-3020-554
-                </button>
+                </a>
                 
-                <div className='flex bg-black text-white gap-5 text-2xl px-5 py-3 font-semibold mt-5 rounded-xl shadow-xl justify-center items-center'>
+                <div className='flex bg-[#fff] text-[#060d2b] gap-5 text-2xl px-5 py-3 font-semibold mt-5 rounded-xl shadow-xl justify-center items-center'>
                     <a href="">
                         <FaFacebook />
                     </a>
-                    <a href="">
+                    <a href="https://www.instagram.com/wla.esp/">
                         <FaInstagram className='text-2xl' />
                     </a>
-                    <a href="">
+                    <a href="https://www.tiktok.com/@wla.esp">
                         <FaTiktok />
                     </a>
                 </div>
